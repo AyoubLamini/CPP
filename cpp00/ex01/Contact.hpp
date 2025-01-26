@@ -5,29 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 20:58:52 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/02 18:46:33 by alamini          ###   ########.fr       */
+/*   Created: 2024/12/11 20:17:49 by alamini           #+#    #+#             */
+/*   Updated: 2024/12/12 18:42:43 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
-# include <string>
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+#include <iostream>
 
 class Contact
 {
     private:
-    std::string firstname;
-    std::string lastname;
-    std::string nickname;
-    std::string phonenumber;
-    std::string darkestsecret;
-
+        std::string FirstName;
+        std::string LastName;
+        std::string NickName;
+        std::string	PhoneNumber;
+        std::string	DarkestSecret;
     public:
-    Contact();
-    ~Contact();
-    void set_contact(std::string firstname, std::string lastname, std::string nickname,
-        std::string phonenumber, std::string darkestsecret);
-    void get_single_contact(int index);
-    void get_all_contacts(int num_of_contacts);    
+        Contact();
+        ~Contact();
+        void set_attributes(std::string FirstName, std::string LastName, std::string NickName, std::string PhoneNumber, std::string DarkestSecret);
+        void display_contact_principal(int contact_count);
+        void display_contact();
 };
-void write_value(std::string field);
+
+#endif

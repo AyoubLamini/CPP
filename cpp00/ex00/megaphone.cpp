@@ -5,29 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 00:08:16 by alamini           #+#    #+#             */
-/*   Updated: 2024/11/26 00:08:17 by alamini          ###   ########.fr       */
+/*   Created: 2024/12/11 20:00:57 by alamini           #+#    #+#             */
+/*   Updated: 2024/12/11 20:08:30 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-int uppercase_str(int argc, char **argv)
-{
-    for (int j = 1; j < argc; j++)
-    {
-        std::string str = argv[j];
-        for (size_t i = 0; i < str.length(); i++)
-            std::cout << (char)toupper(str[i]);
-        std::cout << " ";
-    }
-    std::cout << std::endl;
-    return (0);
-}
 
 int main(int argc, char **argv)
 {
-    if (argc < 2) 
-       return (std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl, 1);
-    uppercase_str(argc, argv);
-    return (0); 
+	if (argc > 1)
+	{
+		for (int i = 1; i < argc; i++)
+		{
+			for (int j = 0; argv[i][j] != '\0'; j++)
+				argv[i][j] = toupper(argv[i][j]);
+			std::cout << argv[i];
+			if (argv[i] != NULL)
+				std::cout << " ";
+		}
+		std::cout << std::endl;
+	}
+	else
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 15:38:40 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/27 15:58:35 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:16:02 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ int main()
     
     zombie->announce();
     delete zombie;
+    return (0);
 }

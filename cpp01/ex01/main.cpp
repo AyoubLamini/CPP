@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:11:55 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/27 16:58:25 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:15:53 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int main()
         WalkingDead[i].announce();
     }
     delete[] WalkingDead;
+    return (0);
 }

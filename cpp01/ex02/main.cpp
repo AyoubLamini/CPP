@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:49:53 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/27 18:04:44 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:15:18 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ int main()
     std::cout << "value pointed by stringPTR : " << *stringPTR << std::endl; 
     std::cout << "value pointed by stringREF: " << stringREF << std::endl; 
     
+    return (0);
 }

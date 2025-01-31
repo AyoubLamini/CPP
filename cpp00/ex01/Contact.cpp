@@ -6,12 +6,14 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:21:23 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:37:25 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 19:00:30 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "utils.hpp"
+#include <cstdlib>
+#include <iomanip> 
 
 Contact::Contact()
 {
@@ -39,8 +41,7 @@ void Contact::fill(std::string message, int index)
 
 void Contact::display_contact_principal(int index)
 {
-    std::cout << "         " << index;
-    std::cout << "|";
+    std::cout << std::setw(10) << index << "|";
     write_field(attributes[0]);
     std::cout << "|";
     write_field(this->attributes[1]);

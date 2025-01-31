@@ -6,14 +6,13 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:17:49 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:33:36 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:56:14 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include <iostream>
-#include <cstdlib>
 
 class Contact
 {

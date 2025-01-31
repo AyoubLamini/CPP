@@ -6,11 +6,14 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:53:15 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:48:06 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:56:46 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
+#include <cstdlib>
 
 int main(int argc, char **argv)
 {

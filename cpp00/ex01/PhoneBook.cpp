@@ -6,12 +6,13 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 23:38:21 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:47:14 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:56:57 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
+#include <cstdlib>
 #include <iostream>
 
 PhoneBook::PhoneBook()

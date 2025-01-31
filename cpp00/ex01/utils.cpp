@@ -6,26 +6,22 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:43:25 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/13 01:18:19 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:15:39 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <iostream>
+#include <iomanip> 
 
-void write_field(std::string field)
-{
+void write_field(const std::string& field) {
     if (field.length() > 10)
         std::cout << field.substr(0, 9) << ".";
     else
-    {
-        for (unsigned long i = 0; i < 10 - field.length(); i++)
-            std::cout << " ";
-        std::cout << field;
-    }
-    
+        std::cout << std::setw(10) << field;
 }
+
 // check if string containers at least a non digit
 bool is_Number(const std::string& str, const std::string& msg)
 {

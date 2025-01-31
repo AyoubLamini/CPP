@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 18:22:24 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/27 19:37:48 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 21:05:06 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Weapon
 {
     private:
-        std::string type;
+        std::string _type;
         
     public:
         Weapon(std::string type);

@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:00:57 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/11 20:08:30 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:10:48 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ int main(int argc, char **argv)
 	{
 		for (int i = 1; i < argc; i++)
 		{
-			for (int j = 0; argv[i][j] != '\0'; j++)
-				argv[i][j] = toupper(argv[i][j]);
-			std::cout << argv[i];
-			if (argv[i] != NULL)
-				std::cout << " ";
+			std::string argument(argv[i]);
+			for (size_t j = 0; j < argument.length(); j++)
+				argument[j] = toupper(argument[j]);
+			std::cout << argument;
 		}
 		std::cout << std::endl;
 	}

@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 23:38:21 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/15 00:16:45 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:47:14 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,10 @@ int PhoneBook::display_phonebook()
     return (0);
 }
 
-void PhoneBook::search_contact(std::string str)
+void PhoneBook::search_contact(const std::string &indexStr)
 {
     int index;
-
-    index = atoi(str.c_str());
+    index = atoi(indexStr.c_str());
     if (index < 0 || index > 7)
         std::cout << "index out of range(0-7)" << std::endl;
     else if (index >= contact_count)

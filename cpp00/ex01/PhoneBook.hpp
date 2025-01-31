@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:24:30 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/15 00:14:23 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:47:33 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PhoneBook
         ~PhoneBook();
         void add_contact(Contact new_contact);
         int display_phonebook();
-        void search_contact(std::string index);
+        void search_contact(const std::string &indexStr);
 };
 
 #endif

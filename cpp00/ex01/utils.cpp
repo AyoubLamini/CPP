@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:43:25 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:15:39 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:51:47 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void write_field(const std::string& field) {
 }
 
 // check if string containers at least a non digit
-bool is_Number(const std::string& str, const std::string& msg)
+bool is_Number(const std::string& str, int index)
 {
-    if (msg != "phone number: " && msg != "Enter an index: ")
+    if (index != 3 && index != 5)
         return (true);
     for (size_t i = 0; i < str.size(); ++i) {
         if (!std::isdigit(str[i])) {
@@ -52,33 +52,5 @@ bool containsNonPrintable(const std::string& str) {
         }
     }
     return false;
-} 
-
-void fill_field(std::string &field, std::string message)
-{
-    do
-    {
-        std::cout << message;
-        std::getline(std::cin, field);
-        if (std::cin.eof())
-            exit(0);
-    }
-    while (field.empty() || isOnlyWhitespace(field) || containsNonPrintable(field) || !is_Number(field, message)) ;
 }
-void fill_contact(PhoneBook &The_phonebook)
-{
-    Contact     new_contact;
-    std::string FirstName;
-    std::string LastName;
-    std::string NickName;
-    std::string PhoneNumber;
-    std::string DarkestSecret;
 
-    fill_field(FirstName, "first name: ");
-    fill_field(LastName, "last name: ");
-    fill_field(NickName, "nickname: ");
-    fill_field(PhoneNumber, "phone number: ");
-    fill_field(DarkestSecret, "darkest secret: ");
-    new_contact.set_attributes(FirstName, LastName, NickName, PhoneNumber, DarkestSecret);
-    The_phonebook.add_contact(new_contact);
-}

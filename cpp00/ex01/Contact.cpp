@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:21:23 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/13 01:27:07 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:37:25 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,39 @@ Contact::~Contact()
     
 };
 
-void Contact::set_attributes(std::string FirstName, std::string LastName, std::string NickName, std::string PhoneNumber, std::string DarkestSecret)
+void Contact::fill(std::string message, int index)
 {
-    this->FirstName = FirstName;
-    this->LastName = LastName;
-    this->NickName = NickName;
-    this->PhoneNumber = PhoneNumber;
-    this->DarkestSecret = DarkestSecret;
+    std::string field;
+    do
+    {
+        std::cout << message;
+        std::getline(std::cin, field);
+        if (std::cin.eof())
+            exit(0);
+    }
+    while (field.empty() || isOnlyWhitespace(field) || containsNonPrintable(field) || !is_Number(field, index)) ;
+    attributes[index] = field;
 }
 
 void Contact::display_contact_principal(int index)
 {
     std::cout << "         " << index;
     std::cout << "|";
-    write_field(this->FirstName);
+    write_field(attributes[0]);
     std::cout << "|";
-    write_field(this->LastName);
+    write_field(this->attributes[1]);
     std::cout << "|";
-    write_field(this->NickName);
+    write_field(this->attributes[2]);
     std::cout << "|" << std::endl;
 }
 
 void Contact::display_contact()
 {
-    std::cout << "First mame: " << this->FirstName << std::endl;
-    std::cout << "Last mame: " << this->LastName << std::endl;
-    std::cout << "Nickname: " << this->NickName << std::endl;
-    std::cout << "Phone number: " << this->PhoneNumber << std::endl;
-    std::cout << "Darkest secret: " << this->DarkestSecret << std::endl;
+    std::cout << "First mame: " << attributes[0] << std::endl;
+    std::cout << "Last mame: " << attributes[1] << std::endl;
+    std::cout << "Nickname: " << attributes[2] << std::endl;
+    std::cout << "Phone number: " << attributes[3] << std::endl;
+    std::cout << "Darkest secret: " << attributes[4]<< std::endl;
    
 }
 

@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:53:15 by alamini           #+#    #+#             */
-/*   Updated: 2024/12/14 23:44:40 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:48:06 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,26 @@ int main(int argc, char **argv)
             break;
         if (command == "ADD")
         {
-            fill_contact(The_Phonebook);
+            Contact newContact;
+            newContact.fill("first name: ", 0);
+            newContact.fill("last name: ", 1);
+            newContact.fill("nickname: ", 2);
+            newContact.fill("phone number: ", 3);
+            newContact.fill("darkest secret: ", 4);
+            The_Phonebook.add_contact(newContact);
         }
         else if (command == "SEARCH")
         {
             if (!The_Phonebook.display_phonebook())
             {
-                fill_field(index, "Enter an index: ");
+                do
+                {
+                    std::cout << "Enter an index: ";
+                    std::getline(std::cin, index);
+                    if (std::cin.eof())
+                        exit(0);
+                }
+                while (index.empty() || isOnlyWhitespace(index) || containsNonPrintable(index) || !is_Number(index, 5)) ;
                 The_Phonebook.search_contact(index);
             }
         }

@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 20:44:34 by alamini           #+#    #+#             */
-/*   Updated: 2025/01/31 18:16:43 by alamini          ###   ########.fr       */
+/*   Updated: 2025/01/31 18:38:54 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 
 void write_field(const std::string& field);
-void fill_contact(PhoneBook &The_phonebook);
-void fill_field(std::string &field, std::string message);
+bool is_Number(const std::string& str, int index);
+bool isOnlyWhitespace(const std::string& str);
+bool containsNonPrintable(const std::string& str);
 #endif

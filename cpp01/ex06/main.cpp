@@ -6,7 +6,7 @@
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:37:18 by alamini           #+#    #+#             */
-/*   Updated: 2025/02/01 16:42:40 by alamini          ###   ########.fr       */
+/*   Updated: 2025/02/01 17:23:27 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
         return (1);
     }
     Harl harl;
-    harl.complain(argv[1]);
+    std::string level = argv[1];
+    harl.complain(level);
     return (0);
 }

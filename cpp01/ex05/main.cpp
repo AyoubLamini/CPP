@@ -5,25 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 21:34:12 by alamini           #+#    #+#             */
-/*   Updated: 2025/02/01 16:25:51 by alamini          ###   ########.fr       */
+/*   Created: 2025/02/01 15:37:18 by alamini           #+#    #+#             */
+/*   Updated: 2025/02/01 16:22:25 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sed.hpp"
-#include <iostream>
+#include "Harl.hpp"
 
-int main(int ac, char **av)
+int main()
 {
-    if (ac != 4)
-    {
-        std::cout << "Invalid arguments" << std::endl;
-        return (1);
-    }
-    else
-    {
-        Sed mySed = Sed(av[1]);
-        mySed.replace(av[2], av[3]);
-    }
-    
+    Harl Harl;
+    Harl.complain("error");
 }

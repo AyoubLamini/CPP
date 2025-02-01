@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alamini <alamini@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 21:34:12 by alamini           #+#    #+#             */
-/*   Updated: 2025/02/01 16:25:51 by alamini          ###   ########.fr       */
+/*   Created: 2025/02/01 15:14:06 by alamini           #+#    #+#             */
+/*   Updated: 2025/02/01 16:23:20 by alamini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sed.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
+
 #include <iostream>
 
-int main(int ac, char **av)
+class Harl
 {
-    if (ac != 4)
-    {
-        std::cout << "Invalid arguments" << std::endl;
-        return (1);
-    }
-    else
-    {
-        Sed mySed = Sed(av[1]);
-        mySed.replace(av[2], av[3]);
-    }
-    
-}
+    private:
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
+    public:
+        Harl();
+        ~Harl();
+        void complain( std::string level );
+};
+
+#endif

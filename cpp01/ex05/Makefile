@@ -1,15 +1,15 @@
-SRC_FILES = main.cpp Sed.cpp
+SRC_FILES = main.cpp Harl.cpp
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
-NAME = my_Sed
+NAME = Harl
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 
 all:	$(NAME)
 
-$(NAME):$(OBJ_FILES)
+$(NAME):$(OBJ_FILES) 
 		c++  $(CFLAGS)   $(OBJ_FILES) -o $(NAME)
 
-%.o : %.cpp Sed.hpp
+%.o : %.cpp Harl.hpp
 	c++ -c $(CFLAGS) $< -o $@
 
 clean:

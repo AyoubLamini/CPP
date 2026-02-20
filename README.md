@@ -63,11 +63,3 @@ Then run the executable:
 🧠 What This Project Represents
 
 These C++ Modules mark the transition from C programming to modern object-oriented design. They serve as a foundation for more advanced projects such as networking, game engines, and large-scale systems development.
-
-If you'd like, I can also write:
-
-A shorter version for GitHub
-
-A more technical version
-
-Or a portfolio-focused description 🚀
